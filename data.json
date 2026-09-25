@@ -1,0 +1,54 @@
+{
+  "trips": [
+    {
+      "name": "Ostern 2024 - Schwarzwald",
+      "stops": [
+        {
+          "name": "Startpunkt: Zuhause",
+          "date": "15.04.2024",
+          "lat": 48.2672,
+          "lng": 11.5452,
+          "image": "images/stop1.jpg",
+          "info": "Los geht's mit Lilly-Anna und Elsa im Camper!"
+        },
+        {
+          "name": "Schwarzwaldklinik",
+          "date": "16.04.2024",
+          "lat": 48.2775,
+          "lng": 8.2951,
+          "image": "images/stop2.jpg",
+          "info": "Wunderschöner Campingplatz im Schwarzwald. Die Katzen lieben es!"
+        },
+        {
+          "name": "Triberg Wasserfälle",
+          "date": "17.04.2024",
+          "lat": 48.1241,
+          "lng": 8.3765,
+          "image": "images/stop3.jpg",
+          "info": "Die höchsten Wasserfälle Deutschlands. Beeindruckend!"
+        }
+      ]
+    },
+    {
+      "name": "Sommerferien 2024 - Alpen",
+      "stops": [
+        {
+          "name": "Campingplatz Garmisch",
+          "date": "01.08.2024",
+          "lat": 47.4919,
+          "lng": 11.0955,
+          "image": "images/stop4.jpg",
+          "info": "Perfekter Ausgangspunkt für Alpentouren"
+        },
+        {
+          "name": "Eibsee",
+          "date": "02.08.2024",
+          "lat": 47.5141,
+          "lng": 10.9875,
+          "image": "images/stop5.jpg",
+          "info": "Kristallklares Wasser und Lilly-Anna & Elsa spielen im Wohnwagen"
+        }
+      ]
+    }
+  ]
+}
