@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+
+# Ich erstelle die aktualisierte HTML mit Tabs/Register
+
+html_content = """<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
@@ -40,21 +43,69 @@
         .container {
             max-width: 1200px;
             margin: 30px auto;
-            padding: 20px;
+            padding: 0;
             background: white;
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+        
+        /* Tabs Styling */
+        .tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e9ecef;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .tab-button {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: 500;
+            color: #666;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .tab-button:hover {
+            background: #e9ecef;
+            color: #667eea;
+        }
+        
+        .tab-button.active {
+            color: #667eea;
+            border-bottom: 3px solid #667eea;
+            margin-bottom: -2px;
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 20px;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         
         #map {
             width: 100%;
             height: 600px;
-            border-radius: 8px;
-            margin-bottom: 30px;
+            border-radius: 0;
         }
         
         .trips-section {
-            margin-top: 30px;
+            margin-top: 0;
         }
         
         .trip {
@@ -119,6 +170,35 @@
             line-height: 1.4;
         }
         
+        .about-section {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .about-section h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .about-section p {
+            line-height: 1.8;
+            margin-bottom: 15px;
+            color: #555;
+        }
+        
+        .cat-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .cat-info h3 {
+            color: #667eea;
+            margin-bottom: 8px;
+        }
+        
         footer {
             text-align: center;
             padding: 20px;
@@ -129,6 +209,16 @@
         @media (max-width: 768px) {
             h1 {
                 font-size: 1.8em;
+            }
+            
+            .tabs {
+                flex-wrap: wrap;
+            }
+            
+            .tab-button {
+                flex: 1 1 33.33%;
+                font-size: 0.9em;
+                padding: 12px 10px;
             }
             
             #map {
@@ -148,8 +238,52 @@
     </header>
     
     <div class="container">
-        <div id="map"></div>
-        <div class="trips-section" id="trips"></div>
+        <!-- Tabs Navigation -->
+        <div class="tabs">
+            <button class="tab-button active" onclick="switchTab('reisen')">🗺 Reisen</button>
+            <button class="tab-button" onclick="switchTab('karte')">🗺 Karte</button>
+            <button class="tab-button" onclick="switchTab('about')">ℹ Über uns</button>
+        </div>
+        
+        <!-- Tab 1: Reisen -->
+        <div id="reisen" class="tab-content active">
+            <div class="trips-section" id="trips"></div>
+        </div>
+        
+        <!-- Tab 2: Karte -->
+        <div id="karte" class="tab-content">
+            <div id="map"></div>
+        </div>
+        
+        <!-- Tab 3: Über uns -->
+        <div id="about" class="tab-content">
+            <div class="about-section">
+                <h2>Über Lilly-Anna und Elsa</h2>
+                
+                <p>Willkommen auf unserer Reise! Wir sind Lilly-Anna und Elsa, zwei neugierige Katzen, die seit 2024 mit ihren Menschen in einem Camper unterwegs sind.</p>
+                
+                <div class="cat-info">
+                    <h3>🐱 Lilly-Anna</h3>
+                    <p>Die abenteuerlust und immer bereit für neue Erkundungen. Sie liebt es, aus dem Camper-Fenster die Landschaft zu beobachten.</p>
+                </div>
+                
+                <div class="cat-info">
+                    <h3>🐱 Elsa</h3>
+                    <p>Die ruhigere von den beiden, genießt es, es sich im Camper gemütlich zu machen und die Ruhe der Natur zu genießen.</p>
+                </div>
+                
+                <p><strong>Unser Camper:</strong> Unser mobiles Zuhause ermöglicht uns, Deutschland und darüber hinaus zu erkunden. Besonders während der Schulferien nutzen wir die Gelegenheit, neue Orte zu entdecken.</p>
+                
+                <p><strong>Highlights unserer Reisen:</strong></p>
+                <p>• Schwarzwaldklinik im Schwarzwald<br>
+                • Wunderschöne Alpenlandschaften<br>
+                • Wasserfälle und Seen<br>
+                • Versteckte Campingplätze<br>
+                • Unzählige Katzen-Abenteuer!</p>
+                
+                <p>Folgt uns auf dieser Seite und verfolgt unsere Abenteuer. Jede Reise ist ein neues Kapitel in unserem gemeinsamen Tagebuch!</p>
+            </div>
+        </div>
     </div>
     
     <footer>
@@ -158,17 +292,36 @@
     
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
-        // Daten laden aus der JSON-Datei
         let map;
         let markers = [];
         let routes = [];
+        
+        // Tab Switching
+        function switchTab(tabName) {
+            // Hide all tabs
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Remove active class from buttons
+            const buttons = document.querySelectorAll('.tab-button');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+            
+            // Resize map if karte tab is opened
+            if (tabName === 'karte' && map) {
+                setTimeout(() => map.invalidateSize(), 100);
+            }
+        }
         
         async function loadData() {
             try {
                 const response = await fetch('data.json');
                 const data = await response.json();
-                initMap(data);
                 renderTrips(data);
+                initMap(data);
             } catch (error) {
                 console.error('Fehler beim Laden der Daten:', error);
                 document.getElementById('trips').innerHTML = '<p>Noch keine Reisen hinzugefügt. Aktualisieren Sie data.json!</p>';
@@ -176,7 +329,6 @@
         }
         
         function initMap(data) {
-            // Zentrum der Karte berechnen
             let allCoords = [];
             data.trips.forEach(trip => {
                 trip.stops.forEach(stop => {
@@ -194,13 +346,11 @@
                 maxZoom: 19
             }).addTo(map);
             
-            // Marker und Routen hinzufügen
             data.trips.forEach((trip, tripIndex) => {
                 const colors = ['#667eea', '#764ba2', '#f093fb', '#4facfe'];
                 const color = colors[tripIndex % colors.length];
                 
                 trip.stops.forEach((stop, stopIndex) => {
-                    // Marker
                     const marker = L.circleMarker([stop.lat, stop.lng], {
                         radius: 8,
                         fillColor: color,
@@ -214,7 +364,6 @@
                     markers.push(marker);
                 });
                 
-                // Route zwischen Stops zeichnen
                 const coords = trip.stops.map(stop => [stop.lat, stop.lng]);
                 if (coords.length > 1) {
                     const polyline = L.polyline(coords, {
@@ -270,8 +419,13 @@
             });
         }
         
-        // Daten beim Laden der Seite abrufen
         loadData();
     </script>
 </body>
-</html>
+</html>"""
+
+print("✅ Neue HTML mit Tabs erstellt!")
+print("\nDu bekommst jetzt 3 Tabs:")
+print("1. 🗺 Reisen - Zeigt alle deine Trips")
+print("2. 🗺 Karte - Interaktive Google Maps Karte")
+print("3. ℹ Über uns - Info zu Lilly-Anna und Elsa")
