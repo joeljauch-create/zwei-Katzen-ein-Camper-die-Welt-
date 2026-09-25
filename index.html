@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zwei Katzen, ein Camper, die Welt</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            min-height: 100vh;
+        }
+        
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 1.1em;
+            color: #666;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        #map {
+            width: 100%;
+            height: 600px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
+        
+        .trips-section {
+            margin-top: 30px;
+        }
+        
+        .trip {
+            background: #f8f9fa;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+        }
+        
+        .trip-title {
+            font-size: 1.5em;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .stops-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+        
+        .stop {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .stop:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .stop-date {
+            font-size: 0.9em;
+            color: #999;
+            margin-bottom: 8px;
+        }
+        
+        .stop-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 8px;
+        }
+        
+        .stop-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        
+        .stop-info {
+            font-size: 0.95em;
+            color: #666;
+            line-height: 1.4;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: white;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            #map {
+                height: 400px;
+            }
+            
+            .stops-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🐾 Zwei Katzen, ein Camper, die Welt</h1>
+        <p class="subtitle">Die Reiseabenteuer von Lilly-Anna und Elsa</p>
+    </header>
+    
+    <div class="container">
+        <div id="map"></div>
+        <div class="trips-section" id="trips"></div>
+    </div>
+    
+    <footer>
+        <p>🚐 Mit Lilly-Anna und Elsa unterwegs seit 2024</p>
+    </footer>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Daten laden aus der JSON-Datei
+        let map;
+        let markers = [];
+        let routes = [];
+        
+        async function loadData() {
+            try {
+                const response = await fetch('data.json');
+                const data = await response.json();
+                initMap(data);
+                renderTrips(data);
+            } catch (error) {
+                console.error('Fehler beim Laden der Daten:', error);
+                document.getElementById('trips').innerHTML = '<p>Noch keine Reisen hinzugefügt. Aktualisieren Sie data.json!</p>';
+            }
+        }
+        
+        function initMap(data) {
+            // Zentrum der Karte berechnen
+            let allCoords = [];
+            data.trips.forEach(trip => {
+                trip.stops.forEach(stop => {
+                    allCoords.push([stop.lat, stop.lng]);
+                });
+            });
+            
+            const centerLat = allCoords.length > 0 ? allCoords.reduce((a, b) => a + b[0], 0) / allCoords.length : 51.5;
+            const centerLng = allCoords.length > 0 ? allCoords.reduce((a, b) => a + b[1], 0) / allCoords.length : 10;
+            
+            map = L.map('map').setView([centerLat, centerLng], 6);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '© OpenStreetMap contributors',
+                maxZoom: 19
+            }).addTo(map);
+            
+            // Marker und Routen hinzufügen
+            data.trips.forEach((trip, tripIndex) => {
+                const colors = ['#667eea', '#764ba2', '#f093fb', '#4facfe'];
+                const color = colors[tripIndex % colors.length];
+                
+                trip.stops.forEach((stop, stopIndex) => {
+                    // Marker
+                    const marker = L.circleMarker([stop.lat, stop.lng], {
+                        radius: 8,
+                        fillColor: color,
+                        color: '#fff',
+                        weight: 2,
+                        opacity: 1,
+                        fillOpacity: 0.8
+                    }).addTo(map);
+                    
+                    marker.bindPopup(`<strong>${stop.name}</strong><br>${stop.date}`);
+                    markers.push(marker);
+                });
+                
+                // Route zwischen Stops zeichnen
+                const coords = trip.stops.map(stop => [stop.lat, stop.lng]);
+                if (coords.length > 1) {
+                    const polyline = L.polyline(coords, {
+                        color: color,
+                        weight: 2,
+                        opacity: 0.7,
+                        dashArray: '5, 5'
+                    }).addTo(map);
+                    routes.push(polyline);
+                }
+            });
+        }
+        
+        function renderTrips(data) {
+            const tripsDiv = document.getElementById('trips');
+            tripsDiv.innerHTML = '';
+            
+            data.trips.forEach(trip => {
+                const tripEl = document.createElement('div');
+                tripEl.className = 'trip';
+                
+                const titleEl = document.createElement('div');
+                titleEl.className = 'trip-title';
+                titleEl.textContent = trip.name;
+                tripEl.appendChild(titleEl);
+                
+                const stopsContainer = document.createElement('div');
+                stopsContainer.className = 'stops-container';
+                
+                trip.stops.forEach(stop => {
+                    const stopEl = document.createElement('div');
+                    stopEl.className = 'stop';
+                    
+                    let stopHTML = `
+                        <div class="stop-date">${stop.date}</div>
+                        <div class="stop-name">${stop.name}</div>
+                    `;
+                    
+                    if (stop.image) {
+                        stopHTML += `<img src="${stop.image}" alt="${stop.name}" class="stop-image">`;
+                    }
+                    
+                    if (stop.info) {
+                        stopHTML += `<div class="stop-info">${stop.info}</div>`;
+                    }
+                    
+                    stopEl.innerHTML = stopHTML;
+                    stopsContainer.appendChild(stopEl);
+                });
+                
+                tripEl.appendChild(stopsContainer);
+                tripsDiv.appendChild(tripEl);
+            });
+        }
+        
+        // Daten beim Laden der Seite abrufen
+        loadData();
+    </script>
+</body>
+</html>
