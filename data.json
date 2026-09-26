@@ -1,52 +1,862 @@
 {
   "trips": [
     {
-      "name": "Ostern 2024 - Schwarzwald",
+      "id": "atlantikküste-2025",
+      "name": "Atlantikküste Frankreich",
+      "start": "2025-10-25",
+      "end": "2025-11-02",
+      "color": "#FF6B6B",
+      "description": "Erste Reise mit dem Camper an der französischen Atlantikküste",
       "stops": [
         {
-          "name": "Startpunkt: Zuhause",
-          "date": "15.04.2024",
-          "lat": 48.2672,
-          "lng": 11.5452,
-          "image": "images/stop1.jpg",
-          "info": "Los geht's mit Lilly-Anna und Elsa im Camper!"
+          "id": "start-heitersheim",
+          "name": "Malteserschule Heitersheim",
+          "lat": 48.0426,
+          "lng": 7.6547,
+          "date": "2025-10-25",
+          "image": "",
+          "info": "Startpunkt der Reise",
+          "type": "start"
         },
         {
-          "name": "Schwarzwaldklinik",
-          "date": "16.04.2024",
-          "lat": 48.2775,
-          "lng": 8.2951,
-          "image": "images/stop2.jpg",
-          "info": "Wunderschöner Campingplatz im Schwarzwald. Die Katzen lieben es!"
+          "id": "lac-saint-agnan",
+          "name": "Lac du Saint-Agnan",
+          "lat": 46.4833,
+          "lng": 2.6667,
+          "date": "2025-10-25",
+          "image": "",
+          "info": "Zwischenstopp",
+          "type": "stop"
         },
         {
-          "name": "Triberg Wasserfälle",
-          "date": "17.04.2024",
-          "lat": 48.1241,
-          "lng": 8.3765,
-          "image": "images/stop3.jpg",
-          "info": "Die höchsten Wasserfälle Deutschlands. Beeindruckend!"
+          "id": "courcelle-le-roi",
+          "name": "Courcelle-Le-Roi",
+          "lat": 46.5833,
+          "lng": 2.7167,
+          "date": "2025-10-25",
+          "image": "",
+          "info": "Übernachtung 21:00 Uhr",
+          "type": "overnight"
+        },
+        {
+          "id": "revi-docks-plage",
+          "name": "Revi Docks Plage, Île de Ré",
+          "lat": 46.2467,
+          "lng": -1.5633,
+          "date": "2025-10-26",
+          "image": "",
+          "info": "Übernachtung",
+          "type": "overnight"
+        },
+        {
+          "id": "pont-de-balenes",
+          "name": "Pont de Balenes, Île de Ré",
+          "lat": 46.1903,
+          "lng": -1.3667,
+          "date": "2025-10-27",
+          "image": "",
+          "info": "Übernachtung 27.-28.10.",
+          "type": "overnight"
+        },
+        {
+          "id": "saint-martin-de-re",
+          "name": "Saint-Martin-de-Ré",
+          "lat": 46.2356,
+          "lng": -1.3439,
+          "date": "2025-10-27",
+          "image": "",
+          "info": "Zwischenstopp",
+          "type": "stop"
+        },
+        {
+          "id": "salzsalinen-ile-oleron",
+          "name": "Salzsalinen, Île d'Oléron",
+          "lat": 45.8167,
+          "lng": -1.3667,
+          "date": "2025-10-28",
+          "image": "",
+          "info": "Zwischenstopp",
+          "type": "stop"
+        },
+        {
+          "id": "phare-chassiron",
+          "name": "Phare de Chassiron, Île d'Oléron",
+          "lat": 46.0483,
+          "lng": -1.4022,
+          "date": "2025-10-28",
+          "image": "",
+          "info": "Zwischenstopp",
+          "type": "stop"
+        },
+        {
+          "id": "saint-pierre-oleron",
+          "name": "Saint-Pierre-d'Oléron, Île d'Oléron",
+          "lat": 45.8833,
+          "lng": -1.3667,
+          "date": "2025-10-28",
+          "image": "",
+          "info": "Übernachtung 28.10.-1.11.",
+          "type": "overnight"
+        },
+        {
+          "id": "sully-sur-loire",
+          "name": "Sully-sur-Loire",
+          "lat": 47.7667,
+          "lng": 2.3833,
+          "date": "2025-11-01",
+          "image": "",
+          "info": "Übernachtung 1.11. ab 17:00 Uhr, direkt am Schloss",
+          "type": "overnight"
         }
       ]
     },
     {
-      "name": "Sommerferien 2024 - Alpen",
+      "id": "pfingsten-2026",
+      "name": "Pfingsten 2026 - Mittelmeerküste",
+      "start": "2026-05-22",
+      "end": "2026-06-06",
+      "color": "#4ECDC4",
+      "description": "Pfingstferien-Reise zur Mittelmeerküste Frankreich",
       "stops": [
         {
-          "name": "Campingplatz Garmisch",
-          "date": "01.08.2024",
-          "lat": 47.4919,
-          "lng": 11.0955,
-          "image": "images/stop4.jpg",
-          "info": "Perfekter Ausgangspunkt für Alpentouren"
+          "id": "thoirette-coisia",
+          "name": "Thoirette-Coisia, Jura",
+          "lat": 46.3500,
+          "lng": 5.5833,
+          "date": "2026-05-22",
+          "image": "",
+          "info": "Übernachtung",
+          "type": "overnight"
         },
         {
-          "name": "Eibsee",
-          "date": "02.08.2024",
-          "lat": 47.5141,
-          "lng": 10.9875,
-          "image": "images/stop5.jpg",
-          "info": "Kristallklares Wasser und Lilly-Anna & Elsa spielen im Wohnwagen"
+          "id": "mont-gerbier-jonc",
+          "name": "Mont Gerbier de Jonc, Ardèche",
+          "lat": 44.9167,
+          "lng": 4.3333,
+          "date": "2026-05-22",
+          "image": "",
+          "info": "Zwischenstopp",
+          "type": "stop"
+        },
+        {
+          "id": "saint-martial",
+          "name": "Saint-Martial, Ardèche",
+          "lat": 44.8333,
+          "lng": 4.3333,
+          "date": "2026-05-22",
+          "image": "",
+          "info": "Übernachtung 22.-23.05.",
+          "type": "overnight"
+        },
+        {
+          "id": "ruoms",
+          "name": "Ruoms, Ardèche",
+          "lat": 44.4167,
+          "lng": 4.3833,
+          "date": "2026-05-23",
+          "image": "",
+          "info": "Übernachtung 23.-25.05.",
+          "type": "overnight"
+        },
+        {
+          "id": "vallon-pont-arc",
+          "name": "Vallon-Pont-d'Arc, Ardèche",
+          "lat": 44.3999,
+          "lng": 4.4007,
+          "date": "2026-05-25",
+          "image": "",
+          "info": "Übernachtung 25.-28.05., Campingplatz les Tunnels",
+          "type": "overnight"
+        },
+        {
+          "id": "labeaume",
+          "name": "Campingplatz les Tunnels bei Labeaume",
+          "lat": 44.3333,
+          "lng": 4.3667,
+          "date": "2026-05-28",
+          "image": "",
+          "info": "Übernachtung 28.-30.05.",
+          "type": "overnight"
+        },
+        {
+          "id": "marseillan",
+          "name": "Marseillan, Hérault",
+          "lat": 43.3333,
+          "lng": 3.5667,
+          "date": "2026-05-30",
+          "image": "",
+          "info": "Übernachtung",
+          "type": "overnight"
+        },
+        {
+          "id": "saintes-maries-la-mer",
+          "name": "Saintes-Maries-de-la-Mer, Bouches-Du-Rhône",
+          "lat": 43.4833,
+          "lng": 4.4333,
+          "date": "2026-05-31",
+          "image": "",
+          "info": "Übernachtung 31.05.-1.06.",
+          "type": "overnight"
+        },
+        {
+          "id": "aigues-mortes",
+          "name": "Aigues-Mortes",
+          "lat": 43.5670,
+          "lng": 4.1840,
+          "date": "2026-05-31",
+          "image": "",
+          "info": "Zugfahrt Salins d'Aigues-Mortes",
+          "type": "stop"
+        },
+        {
+          "id": "saint-cyr-sur-mer",
+          "name": "Saint-Cyr-Sur-Mer, Var",
+          "lat": 43.1667,
+          "lng": 5.6333,
+          "date": "2026-06-02",
+          "image": "",
+          "info": "Übernachtung 2.-4.06.",
+          "type": "overnight"
+        },
+        {
+          "id": "sanary-sur-mer",
+          "name": "Sanary-Sur-Mer",
+          "lat": 43.0967,
+          "lng": 5.7950,
+          "date": "2026-06-03",
+          "image": "",
+          "info": "Zwischenstopp",
+          "type": "stop"
+        },
+        {
+          "id": "le-castellet",
+          "name": "Le Castellet",
+          "lat": 43.2489,
+          "lng": 5.7758,
+          "date": "2026-06-03",
+          "image": "",
+          "info": "Zwischenstopp",
+          "type": "stop"
+        },
+        {
+          "id": "sainte-eulalie",
+          "name": "Sainte-Eulalie, Ardèche",
+          "lat": 44.6667,
+          "lng": 4.1667,
+          "date": "2026-06-05",
+          "image": "",
+          "info": "Übernachtung 5.-6.06.",
+          "type": "overnight"
+        },
+        {
+          "id": "schokoladenboutique-sainte-eulalie",
+          "name": "LQ créateur chocolatier, Sainte-Eulalie",
+          "lat": 44.6667,
+          "lng": 4.1667,
+          "date": "2026-06-06",
+          "image": "",
+          "info": "Schokoladenboutique, Oscar der Hund wiedergefunden",
+          "type": "stop"
+        }
+      ]
+    },
+    {
+      "id": "norwegen-sommer-2026",
+      "name": "Norwegen Sommer 2026",
+      "start": "2026-08-03",
+      "end": "2026-08-27",
+      "color": "#95E1D3",
+      "description": "Große Norwegen-Reise Süden-Westen mit Katzen Lilly-Anna und Elsa",
+      "stops": [
+        {
+          "id": "endingen-start",
+          "name": "Endingen",
+          "lat": 48.0742,
+          "lng": 7.6744,
+          "date": "2026-08-03",
+          "image": "",
+          "info": "Startpunkt - Nachtfahrt",
+          "type": "start"
+        },
+        {
+          "id": "elbtunnel-hamburg",
+          "name": "Elbtunnel, Hamburg",
+          "lat": 53.5200,
+          "lng": 10.0050,
+          "date": "2026-08-03",
+          "image": "",
+          "info": "Durchfahrt in der Nacht",
+          "type": "stop"
+        },
+        {
+          "id": "hof-dollerupholz-westerholz",
+          "name": "Hof Dollerupholz, Westerholz",
+          "lat": 54.4050,
+          "lng": 9.1100,
+          "date": "2026-08-03",
+          "image": "",
+          "info": "Erste Übernachtung - Motor- und Batterieprobleme",
+          "type": "overnight"
+        },
+        {
+          "id": "autohaus-schubert-neuberend",
+          "name": "Autohaus Schubert, Neuberend",
+          "lat": 54.8167,
+          "lng": 9.3333,
+          "date": "2026-08-04",
+          "image": "",
+          "info": "Werkstatt - schnell repariert",
+          "type": "stop"
+        },
+        {
+          "id": "storebaeltsbroen-nyborg",
+          "name": "Storebæltsbroen, Nyborg",
+          "lat": 55.3667,
+          "lng": 10.8167,
+          "date": "2026-08-04",
+          "image": "",
+          "info": "Große-Belt-Brücke - übers Meer",
+          "type": "stop"
+        },
+        {
+          "id": "oresundsbroen-malmo",
+          "name": "Öresundsbron, Malmö",
+          "lat": 55.3989,
+          "lng": 12.8036,
+          "date": "2026-08-04",
+          "image": "",
+          "info": "Öresund-Brücke - durch und übers Meer",
+          "type": "stop"
+        },
+        {
+          "id": "lerum-goteborg",
+          "name": "Lerum, Göteborg",
+          "lat": 58.3333,
+          "lng": 12.2667,
+          "date": "2026-08-04",
+          "image": "",
+          "info": "Übernachtung",
+          "type": "overnight"
+        },
+        {
+          "id": "hafslund-helleristninger",
+          "name": "Hafslund helleristninger, Hafslund",
+          "lat": 59.8500,
+          "lng": 11.1833,
+          "date": "2026-08-05",
+          "image": "",
+          "info": "Bronzezeit-Felszeichnungen, Sprühregen",
+          "type": "stop"
+        },
+        {
+          "id": "holmenkollen-oslo",
+          "name": "Holmenkollen, Oslo",
+          "lat": 59.9958,
+          "lng": 10.4855,
+          "date": "2026-08-05",
+          "image": "",
+          "info": "Skischanze, Trolle, Aussicht",
+          "type": "stop"
+        },
+        {
+          "id": "ovreseter-north-parking",
+          "name": "Øvreseter North Parking",
+          "lat": 60.1500,
+          "lng": 10.5000,
+          "date": "2026-08-05",
+          "image": "",
+          "info": "Übernachtung bei Oslo",
+          "type": "overnight"
+        },
+        {
+          "id": "nobel-fredssenter-oslo",
+          "name": "Nobel Fredssenter, Oslo",
+          "lat": 59.9236,
+          "lng": 10.7325,
+          "date": "2026-08-06",
+          "image": "",
+          "info": "Zu Fuß erkundet",
+          "type": "stop"
+        },
+        {
+          "id": "rathaus-oslo",
+          "name": "Oslo Rathaus und Hafen",
+          "lat": 59.9127,
+          "lng": 10.7532,
+          "date": "2026-08-06",
+          "image": "",
+          "info": "Zu Fuß erkundet",
+          "type": "stop"
+        },
+        {
+          "id": "ovresetertjern-oslo",
+          "name": "Øvresetertjern See",
+          "lat": 60.1500,
+          "lng": 10.5000,
+          "date": "2026-08-06",
+          "image": "",
+          "info": "Baden im See",
+          "type": "stop"
+        },
+        {
+          "id": "osterholtheia-sunderbru",
+          "name": "Østerholtheia rasteplass sørgående, Sunderbru",
+          "lat": 59.8300,
+          "lng": 10.7300,
+          "date": "2026-08-06",
+          "image": "",
+          "info": "Wunderschöner Rastplatz mit See, 258 km",
+          "type": "overnight"
+        },
+        {
+          "id": "lindesnes-fyr",
+          "name": "Lindesnes Fyr, Spangereid",
+          "lat": 58.0089,
+          "lng": 6.6817,
+          "date": "2026-08-07",
+          "image": "",
+          "info": "Ältester und südlichster Leuchtturm Norwegens",
+          "type": "stop"
+        },
+        {
+          "id": "lindesnes-camping",
+          "name": "Parkeringsplass Lindesnes Fyr",
+          "lat": 58.0089,
+          "lng": 6.6817,
+          "date": "2026-08-07",
+          "image": "",
+          "info": "Übernachtung mit Zimt- und Kardamomschnecken + Brot, Drohnenflug",
+          "type": "overnight"
+        },
+        {
+          "id": "preikestolen",
+          "name": "Preikestolen (Predigerstenen)",
+          "lat": 58.9850,
+          "lng": 6.1897,
+          "date": "2026-08-08",
+          "image": "",
+          "info": "Wanderung, Parkplatz Moslimyrå, 14:30 Uhr",
+          "type": "stop"
+        },
+        {
+          "id": "skjersvika-boatforening-jorpeland",
+          "name": "Skjersvika Båtforening, Jørpeland",
+          "lat": 58.9850,
+          "lng": 6.1300,
+          "date": "2026-08-08",
+          "image": "",
+          "info": "Übernachtung",
+          "type": "overnight"
+        },
+        {
+          "id": "stavanger",
+          "name": "Stavanger",
+          "lat": 58.9700,
+          "lng": 5.7331,
+          "date": "2026-08-09",
+          "image": "",
+          "info": "Stadt, Touri-Shops, Joel sieht ersten Wal",
+          "type": "stop"
+        },
+        {
+          "id": "midtun-camping-nesttun-bergen",
+          "name": "Midtun Motell & Camping AS, Nesttun",
+          "lat": 60.3500,
+          "lng": 5.1833,
+          "date": "2026-08-09",
+          "image": "",
+          "info": "Bergen - Übernachtung nach zwei Fährfahrten",
+          "type": "overnight"
+        },
+        {
+          "id": "fisketorget-bergen",
+          "name": "Fisketorget i Bergen",
+          "lat": 60.3915,
+          "lng": 5.3211,
+          "date": "2026-08-10",
+          "image": "",
+          "info": "Fischmarkt",
+          "type": "stop"
+        },
+        {
+          "id": "bryggen-bergen",
+          "name": "Bryggen, Bergen",
+          "lat": 60.3962,
+          "lng": 5.3234,
+          "date": "2026-08-10",
+          "image": "",
+          "info": "UNESCO-Holzhäuser",
+          "type": "stop"
+        },
+        {
+          "id": "floyen-bergen",
+          "name": "Fløyen, Bergen",
+          "lat": 60.3835,
+          "lng": 5.3285,
+          "date": "2026-08-10",
+          "image": "",
+          "info": "Bahn, Skillingsbollen vom Baker Brun",
+          "type": "stop"
+        },
+        {
+          "id": "steinsdalfossen-norheimsund",
+          "name": "Steinsdalfossen, Norheimsund",
+          "lat": 60.4231,
+          "lng": 5.8597,
+          "date": "2026-08-10",
+          "image": "",
+          "info": "Wasserfall für sich allein übernachten",
+          "type": "overnight"
+        },
+        {
+          "id": "tvindefossen-skulestadmo",
+          "name": "Tvindefossen, Skulestadmo",
+          "lat": 60.5283,
+          "lng": 6.3500,
+          "date": "2026-08-11",
+          "image": "",
+          "info": "Wasserfall-Zwischenstopp",
+          "type": "stop"
+        },
+        {
+          "id": "naeroyfjord-aurland",
+          "name": "Nærøyfjord World Heritage Park, Aurland",
+          "lat": 60.9167,
+          "lng": 7.1000,
+          "date": "2026-08-11",
+          "image": "",
+          "info": "Ziegen-Stau auf Zufahrt zu Undredal",
+          "type": "stop"
+        },
+        {
+          "id": "undredal-stavkyrkje",
+          "name": "Undredal stavkyrkje",
+          "lat": 60.9500,
+          "lng": 7.1167,
+          "date": "2026-08-11",
+          "image": "",
+          "info": "Kleinste Stabkirche",
+          "type": "stop"
+        },
+        {
+          "id": "undredal-bryggen-restaurant",
+          "name": "Undredal Bryggen Restaurant",
+          "lat": 60.9500,
+          "lng": 7.1167,
+          "date": "2026-08-11",
+          "image": "",
+          "info": "Neues Essen probiert",
+          "type": "stop"
+        },
+        {
+          "id": "aurlandsfjord-parking",
+          "name": "Parkbucht E16, Aurlandsfjord",
+          "lat": 60.9500,
+          "lng": 7.1667,
+          "date": "2026-08-11",
+          "image": "",
+          "info": "Übernachtung zwischen Flåm und Aurlandsvangen",
+          "type": "overnight"
+        },
+        {
+          "id": "stegastein-aurland",
+          "name": "Stegastein, Aurland",
+          "lat": 60.9500,
+          "lng": 7.0833,
+          "date": "2026-08-12",
+          "image": "",
+          "info": "Aussichtsplattform, 2. Versuch erfolgreich",
+          "type": "stop"
+        },
+        {
+          "id": "bjoergavegen-aurland",
+          "name": "Bjørgavegen, Aurland",
+          "lat": 60.9667,
+          "lng": 7.0500,
+          "date": "2026-08-12",
+          "image": "",
+          "info": "Hochgebirgsstraße mit Schnee- und Eisfeldern",
+          "type": "stop"
+        },
+        {
+          "id": "kvanunadalen-aurland",
+          "name": "Kvanunadalen, Aurland",
+          "lat": 60.9667,
+          "lng": 6.9833,
+          "date": "2026-08-12",
+          "image": "",
+          "info": "Eisfelder",
+          "type": "stop"
+        },
+        {
+          "id": "vedahaugane-aurland",
+          "name": "Vedahaugane, Aurland",
+          "lat": 60.9333,
+          "lng": 6.9500,
+          "date": "2026-08-12",
+          "image": "",
+          "info": "Zwischenstopp",
+          "type": "stop"
+        },
+        {
+          "id": "laerdal-baeckerei",
+          "name": "Lärdal Baeckerei",
+          "lat": 60.9500,
+          "lng": 7.1167,
+          "date": "2026-08-12",
+          "image": "",
+          "info": "Kanelboller und Kardemommabullar",
+          "type": "stop"
+        },
+        {
+          "id": "borgund-stavkyrkje",
+          "name": "Borgund Stavkyrkje",
+          "lat": 60.8917,
+          "lng": 6.8500,
+          "date": "2026-08-12",
+          "image": "",
+          "info": "Besterhaltene Stabkirche Norwegens",
+          "type": "stop"
+        },
+        {
+          "id": "aardalsfjord-parking",
+          "name": "Parkplatz an der 53, Årdalsfjord",
+          "lat": 60.6667,
+          "lng": 6.7500,
+          "date": "2026-08-12",
+          "image": "",
+          "info": "Übernachtung zwischen Naddvik und Årdalstangen, Borgund-Suppe",
+          "type": "overnight"
+        },
+        {
+          "id": "sognefjellsvegen-fortun",
+          "name": "55 Sognefjellsvegen, Fortun",
+          "lat": 61.1167,
+          "lng": 7.0833,
+          "date": "2026-08-13",
+          "image": "",
+          "info": "Gebirgsstraße",
+          "type": "stop"
+        },
+        {
+          "id": "sagasoeyla-statue-boeverdalen",
+          "name": "Sagasøyla Statue, Bøverdalen",
+          "lat": 61.2500,
+          "lng": 7.0833,
+          "date": "2026-08-13",
+          "image": "",
+          "info": "Zwischenstopp",
+          "type": "stop"
+        },
+        {
+          "id": "doenfoss-camping-nordberg",
+          "name": "Dønfoss Camping, Nordberg",
+          "lat": 61.1333,
+          "lng": 7.6167,
+          "date": "2026-08-13",
+          "image": "",
+          "info": "Außenpool, Wäsche waschen, Wildfluss Otta",
+          "type": "overnight"
+        },
+        {
+          "id": "trollstigen-geiranger",
+          "name": "63 Trollstigen, Geiranger",
+          "lat": 62.4537,
+          "lng": 7.6641,
+          "date": "2026-08-14",
+          "image": "",
+          "info": "Spektakuläre Bergstraße mit 11 Haarnadelkurven",
+          "type": "stop"
+        },
+        {
+          "id": "dalnibba-geiranger",
+          "name": "Dalnibba Aussichtspunkt, Geiranger",
+          "lat": 62.0489,
+          "lng": 7.2693,
+          "date": "2026-08-14",
+          "image": "",
+          "info": "1.500m - Europas höchster Fjordblick von der Straße",
+          "type": "stop"
+        },
+        {
+          "id": "kleivafossen-geiranger",
+          "name": "Kleivafossen, Geiranger",
+          "lat": 62.0500,
+          "lng": 7.2500,
+          "date": "2026-08-14",
+          "image": "",
+          "info": "Wasserfall zum Hochzulaufen",
+          "type": "stop"
+        },
+        {
+          "id": "geiranger-sjokolade",
+          "name": "Geiranger Sjokolade",
+          "lat": 62.1167,
+          "lng": 7.2167,
+          "date": "2026-08-14",
+          "image": "",
+          "info": "Süßes Schokoladencafé",
+          "type": "stop"
+        },
+        {
+          "id": "grodaas-see",
+          "name": "Parkplatz Grodås am See",
+          "lat": 61.9167,
+          "lng": 5.6167,
+          "date": "2026-08-14",
+          "image": "",
+          "info": "Hornindalsvatnet - Europas tiefster See (514m)",
+          "type": "overnight"
+        },
+        {
+          "id": "rundebrua",
+          "name": "Rundebrua",
+          "lat": 62.4074,
+          "lng": 5.6242,
+          "date": "2026-08-15",
+          "image": "",
+          "info": "Brücke",
+          "type": "stop"
+        },
+        {
+          "id": "runde-vogelkolonie",
+          "name": "Runde - Vogelkolonien",
+          "lat": 62.4000,
+          "lng": 5.6250,
+          "date": "2026-08-15",
+          "image": "",
+          "info": "500.000-700.000 Seevögel: Basstölpel, Adler, Papageientaucher",
+          "type": "stop"
+        },
+        {
+          "id": "goksoyr-camping",
+          "name": "Goksør Camping, Runde",
+          "lat": 62.4041,
+          "lng": 5.6242,
+          "date": "2026-08-15",
+          "image": "",
+          "info": "Direkt am Fjord mit Möglichkeit Wäsche zu waschen und trocknen",
+          "type": "overnight"
+        },
+        {
+          "id": "trollkyrkja-valldal",
+          "name": "Trollkyrkja, Valldal",
+          "lat": 62.8888,
+          "lng": 7.2678,
+          "date": "2026-08-16",
+          "image": "",
+          "info": "Längste Höhle Südnorwegens - Wanderung durch verwunschene Wälder, kühle Bäche, Holzpfade, Blaubeeren",
+          "type": "stop"
+        },
+        {
+          "id": "trollkyrkja-parking-elnesvagen",
+          "name": "Parkplatz Trollkyrkja/Elnesvägen",
+          "lat": 62.8673,
+          "lng": 7.2751,
+          "date": "2026-08-16",
+          "image": "",
+          "info": "Übernachtung",
+          "type": "overnight"
+        },
+        {
+          "id": "atlanterhavsveien-start",
+          "name": "64 Atlanterhavsveien",
+          "lat": 62.9500,
+          "lng": 7.3000,
+          "date": "2026-08-17",
+          "image": "",
+          "info": "Route von Bud nach Christiansund",
+          "type": "stop"
+        },
+        {
+          "id": "storseisundbrua-averoy",
+          "name": "Storseisundbrua, Averøy",
+          "lat": 63.0167,
+          "lng": 7.3543,
+          "date": "2026-08-17",
+          "image": "",
+          "info": "Spektakuläre Brücke über's Meer - längste Brücke der Atlanterhavsveien",
+          "type": "stop"
+        },
+        {
+          "id": "eldhusoeyan-nakoalapolku-averoy",
+          "name": "Eldhusøyan nåkøalapolku, Averøy",
+          "lat": 62.9300,
+          "lng": 7.2900,
+          "date": "2026-08-17",
+          "image": "",
+          "info": "Aussichtspunkt mit 550m Laufsteg über dem Meer",
+          "type": "stop"
+        },
+        {
+          "id": "kanestraum-halsa-faehre",
+          "name": "Fährfahrten Kanestraum → Halsa",
+          "lat": 63.1000,
+          "lng": 7.1667,
+          "date": "2026-08-17",
+          "image": "",
+          "info": "Camper in Fähre - erste in Reihe!",
+          "type": "stop"
+        },
+        {
+          "id": "orcas-beobachtung",
+          "name": "Orcas-Beobachtung",
+          "lat": 63.1000,
+          "lng": 7.0000,
+          "date": "2026-08-17",
+          "image": "",
+          "info": "Versuch ohne Erfolg, aber versucht",
+          "type": "stop"
+        },
+        {
+          "id": "oysand-camping-melhus",
+          "name": "Øysand Camping, Melhus",
+          "lat": 63.3272,
+          "lng": 10.2138,
+          "date": "2026-08-17",
+          "image": "",
+          "info": "Super Platz direkt am Fjord - Wäsche waschen, Angeln, Lesen, Watspaziergang, Rotwein, Chili sin Carne mit Wraps",
+          "type": "overnight"
+        },
+        {
+          "id": "nidarosdom-trondheim",
+          "name": "Nidarosdom, Trondheim",
+          "lat": 63.4273,
+          "lng": 10.3986,
+          "date": "2026-08-18",
+          "image": "",
+          "info": "Kathedrale",
+          "type": "stop"
+        },
+        {
+          "id": "gamie-bybro-trondheim",
+          "name": "Gamie Bybro, Trondheim",
+          "lat": 63.4322,
+          "lng": 10.4005,
+          "date": "2026-08-18",
+          "image": "",
+          "info": "Alte Brücke",
+          "type": "stop"
+        },
+        {
+          "id": "schloss-schaukel-trondheim",
+          "name": "Schloss Schaukel",
+          "lat": 63.4200,
+          "lng": 10.3900,
+          "date": "2026-08-18",
+          "image": "",
+          "info": "Bei Baustelle - wackliger Boden",
+          "type": "stop"
+        },
+        {
+          "id": "solsiden-senter-trondheim",
+          "name": "Solsiden Senter, Trondheim",
+          "lat": 63.4350,
+          "lng": 10.3500,
+          "date": "2026-08-18",
+          "image": "",
+          "info": "Spaziergang",
+          "type": "stop"
         }
       ]
     }
